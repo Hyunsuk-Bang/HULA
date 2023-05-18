@@ -1,24 +1,23 @@
-HULA Load Balancer 
+## HULA LOAD BALANCER
 Name: Hyunsuk Bang
 Email: hbang3@hawk.iit.edu
-CWID: A20431930
 
 This project is a replication of the paper <HULA : Scalable Load Balancing Using Programmable Data Planes> by N Katta. 
 "https://conferences.sigcomm.org/sosr/2016/papers/sosr_paper67.pdf"
 
 HULA is a Hop-by-Hop Utilization aware Load balancing architecture works on fat-tree topology.
-HULA switches always choose the next best hop given the destination TOR switches. It can handle link assymetry and sudden link failure also.
+HULA switches always choose the next best hop given the destination TOR switches. <br>
+It can handle link assymetry and sudden link failure. <br>
 
-===========================================================================================================================
-- How to Install and Run HULA loadbalancer -
+
+## Install and Run HULA loadbalancer
 0. pip3 install -r requirements.txt
 1. make compile
 2. sudo hula_top_gen
 - to change the number of core switches, aggregated switches, and leaf switches, edit environmnet variable in Makefile
 3. sudo make run
-===========================================================================================================================
 
-===========================================================================================================================
+## Visualize
 - To visualize the life of packet traveling from host A to host B - 
 1. start by doing 'To start' section
 
@@ -38,12 +37,10 @@ This will generate image files under ./hula_images file showing which paths that
 5. Generate GIF
 $ make hula_make_gif
 The output will be hula.gif
-===========================================================================================================================
 
-===========================================================================================================================
-- To test link asymmetry or link failure -
+
+## Test link asymmetry or link failure -
  $ make hula_link_failure
-
-- To recover link failure - 
+### link recover
  $ make hula_link_recover
 ===========================================================================================================================
