@@ -1,4 +1,4 @@
-### HULA LOAD BALANCER
+# HULA LOAD BALANCER
 Name: Hyunsuk Bang
 <br>
 Email: hbang3@hawk.iit.edu
