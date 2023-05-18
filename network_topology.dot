@@ -1,0 +1,114 @@
+digraph network_topology {
+	subgraph core {
+		rank=min
+		c0
+		c1
+		c2
+		c3
+	}
+	subgraph agg {
+		rank=same
+		a0_0
+		a0_1
+		a1_0
+		a1_1
+		a2_0
+		a2_1
+		a3_0
+		a3_1
+	}
+	subgraph leaf {
+		rank=same
+		l0_0
+		l0_1
+		l1_0
+		l1_1
+		l2_0
+		l2_1
+		l3_0
+		l3_1
+	}
+	subgraph host {
+		rank=max
+		h0_0_0
+		h0_0_1
+		h0_1_0
+		h0_1_1
+		h1_0_0
+		h1_0_1
+		h1_1_0
+		h1_1_1
+		h2_0_0
+		h2_0_1
+		h2_1_0
+		h2_1_1
+		h3_0_0
+		h3_0_1
+		h3_1_0
+		h3_1_1
+	}
+	a0_0 -> c0 [dir=none]
+	a0_0 -> c1 [dir=none]
+	a0_0 -> c2 [dir=none]
+	a0_0 -> c3 [dir=none]
+	a0_0 -> l0_0 [dir=none]
+	a0_0 -> l0_1 [dir=none]
+	a0_1 -> c0 [dir=none]
+	a0_1 -> c1 [dir=none]
+	a0_1 -> c2 [dir=none]
+	a0_1 -> c3 [dir=none]
+	a0_1 -> l0_0 [dir=none]
+	a0_1 -> l0_1 [dir=none]
+	a1_0 -> c0 [dir=none]
+	a1_0 -> c1 [dir=none]
+	a1_0 -> c2 [dir=none]
+	a1_0 -> c3 [dir=none]
+	a1_0 -> l1_0 [dir=none]
+	a1_0 -> l1_1 [dir=none]
+	a1_1 -> c0 [dir=none]
+	a1_1 -> c1 [dir=none]
+	a1_1 -> c2 [dir=none]
+	a1_1 -> c3 [dir=none]
+	a1_1 -> l1_0 [dir=none]
+	a1_1 -> l1_1 [dir=none]
+	a2_0 -> c0 [dir=none]
+	a2_0 -> c1 [dir=none]
+	a2_0 -> c2 [dir=none]
+	a2_0 -> c3 [dir=none]
+	a2_0 -> l2_0 [dir=none]
+	a2_0 -> l2_1 [dir=none]
+	a2_1 -> c0 [dir=none]
+	a2_1 -> c1 [dir=none]
+	a2_1 -> c2 [dir=none]
+	a2_1 -> c3 [dir=none]
+	a2_1 -> l2_0 [dir=none]
+	a2_1 -> l2_1 [dir=none]
+	a3_0 -> c0 [dir=none]
+	a3_0 -> c1 [dir=none]
+	a3_0 -> c2 [dir=none]
+	a3_0 -> c3 [dir=none]
+	a3_0 -> l3_0 [dir=none]
+	a3_0 -> l3_1 [dir=none]
+	a3_1 -> c0 [dir=none]
+	a3_1 -> c1 [dir=none]
+	a3_1 -> c2 [dir=none]
+	a3_1 -> c3 [dir=none]
+	a3_1 -> l3_0 [dir=none]
+	a3_1 -> l3_1 [dir=none]
+	l0_0 -> h0_0_0 [dir=none]
+	l0_0 -> h0_0_1 [dir=none]
+	l0_1 -> h0_1_0 [dir=none]
+	l0_1 -> h0_1_1 [dir=none]
+	l1_0 -> h1_0_0 [dir=none]
+	l1_0 -> h1_0_1 [dir=none]
+	l1_1 -> h1_1_0 [dir=none]
+	l1_1 -> h1_1_1 [dir=none]
+	l2_0 -> h2_0_0 [dir=none]
+	l2_0 -> h2_0_1 [dir=none]
+	l2_1 -> h2_1_0 [dir=none]
+	l2_1 -> h2_1_1 [dir=none]
+	l3_0 -> h3_0_0 [dir=none]
+	l3_0 -> h3_0_1 [dir=none]
+	l3_1 -> h3_1_0 [dir=none]
+	l3_1 -> h3_1_1 [dir=none]
+}

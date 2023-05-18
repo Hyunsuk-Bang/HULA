@@ -1,0 +1,28 @@
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: Creating node with rid 1 , port map 11100 and lag map 
+node was created with handle 0
+RuntimeCmd: Creating multicast group 1
+RuntimeCmd: Associating node 0 to multicast group 1
+RuntimeCmd: Associating node 0 to multicast group 1
+Invalid PRE operation (ERROR)
+RuntimeCmd: Creating node with rid 2 , port map 11010 and lag map 
+node was created with handle 1
+RuntimeCmd: Creating multicast group 2
+RuntimeCmd: Associating node 1 to multicast group 2
+RuntimeCmd: Associating node 1 to multicast group 2
+Invalid PRE operation (ERROR)
+RuntimeCmd: Creating node with rid 3 , port map 10110 and lag map 
+node was created with handle 2
+RuntimeCmd: Creating multicast group 3
+RuntimeCmd: Associating node 2 to multicast group 3
+RuntimeCmd: Associating node 2 to multicast group 3
+Invalid PRE operation (ERROR)
+RuntimeCmd: Creating node with rid 4 , port map 1110 and lag map 
+node was created with handle 3
+RuntimeCmd: Creating multicast group 4
+RuntimeCmd: Associating node 3 to multicast group 4
+RuntimeCmd: Associating node 3 to multicast group 4
+Invalid PRE operation (ERROR)
+RuntimeCmd: RuntimeCmd: 

@@ -1,0 +1,902 @@
+hosts:
+  h0_0_0:
+    interfaces:
+    - mac: '02:00:00:5f:6f:e0'
+      ip: 10.0.0.2/24
+      port: 1
+    programs:
+    - cmd: "echo 'Hello from' h0_0_0"
+      fg: true
+    - cmd: "sudo arp -v -i h0_0_0-eth1 -s 10.0.0.2 02:00:00:5f:6f:e0"
+      fg: true
+    - cmd: "sudo route add default h0_0_0-eth1"
+      fg: true
+    - cmd: "sudo arp -v -i h0_0_0-eth1 -s 10.0.0.2 02:00:00:5f:6f:e0"
+    - cmd: "sudo arp -v -i h0_0_0-eth1 -s 10.0.0.3 02:00:00:af:dd:e3"
+    - cmd: "sudo arp -v -i h0_0_0-eth1 -s 10.0.1.2 02:00:00:b4:63:c9"
+    - cmd: "sudo arp -v -i h0_0_0-eth1 -s 10.0.1.3 02:00:00:5a:fc:39"
+    - cmd: "sudo arp -v -i h0_0_0-eth1 -s 10.0.2.2 02:00:00:3f:0d:40"
+    - cmd: "sudo arp -v -i h0_0_0-eth1 -s 10.0.2.3 02:00:00:0b:1c:6d"
+    - cmd: "sudo arp -v -i h0_0_0-eth1 -s 10.0.3.2 02:00:00:2a:c4:a9"
+    - cmd: "sudo arp -v -i h0_0_0-eth1 -s 10.0.3.3 02:00:00:71:4e:fe"
+    - cmd: "sudo arp -v -i h0_0_0-eth1 -s 10.0.4.2 02:00:00:ac:9c:70"
+    - cmd: "sudo arp -v -i h0_0_0-eth1 -s 10.0.4.3 02:00:00:ba:26:f9"
+    - cmd: "sudo arp -v -i h0_0_0-eth1 -s 10.0.5.2 02:00:00:af:1d:73"
+    - cmd: "sudo arp -v -i h0_0_0-eth1 -s 10.0.5.3 02:00:00:41:28:e4"
+    - cmd: "sudo arp -v -i h0_0_0-eth1 -s 10.0.6.2 02:00:00:72:5c:41"
+    - cmd: "sudo arp -v -i h0_0_0-eth1 -s 10.0.6.3 02:00:00:5b:26:55"
+    - cmd: "sudo arp -v -i h0_0_0-eth1 -s 10.0.7.2 02:00:00:5d:b1:34"
+    - cmd: "sudo arp -v -i h0_0_0-eth1 -s 10.0.7.3 02:00:00:d9:80:5b"
+  h0_0_1:
+    interfaces:
+    - mac: '02:00:00:af:dd:e3'
+      ip: 10.0.0.3/24
+      port: 1
+    programs:
+    - cmd: "echo 'Hello from' h0_0_1"
+      fg: true
+    - cmd: "sudo arp -v -i h0_0_1-eth1 -s 10.0.0.3 02:00:00:af:dd:e3"
+      fg: true
+    - cmd: "sudo route add default h0_0_1-eth1"
+      fg: true
+    - cmd: "sudo arp -v -i h0_0_1-eth1 -s 10.0.0.2 02:00:00:5f:6f:e0"
+    - cmd: "sudo arp -v -i h0_0_1-eth1 -s 10.0.0.3 02:00:00:af:dd:e3"
+    - cmd: "sudo arp -v -i h0_0_1-eth1 -s 10.0.1.2 02:00:00:b4:63:c9"
+    - cmd: "sudo arp -v -i h0_0_1-eth1 -s 10.0.1.3 02:00:00:5a:fc:39"
+    - cmd: "sudo arp -v -i h0_0_1-eth1 -s 10.0.2.2 02:00:00:3f:0d:40"
+    - cmd: "sudo arp -v -i h0_0_1-eth1 -s 10.0.2.3 02:00:00:0b:1c:6d"
+    - cmd: "sudo arp -v -i h0_0_1-eth1 -s 10.0.3.2 02:00:00:2a:c4:a9"
+    - cmd: "sudo arp -v -i h0_0_1-eth1 -s 10.0.3.3 02:00:00:71:4e:fe"
+    - cmd: "sudo arp -v -i h0_0_1-eth1 -s 10.0.4.2 02:00:00:ac:9c:70"
+    - cmd: "sudo arp -v -i h0_0_1-eth1 -s 10.0.4.3 02:00:00:ba:26:f9"
+    - cmd: "sudo arp -v -i h0_0_1-eth1 -s 10.0.5.2 02:00:00:af:1d:73"
+    - cmd: "sudo arp -v -i h0_0_1-eth1 -s 10.0.5.3 02:00:00:41:28:e4"
+    - cmd: "sudo arp -v -i h0_0_1-eth1 -s 10.0.6.2 02:00:00:72:5c:41"
+    - cmd: "sudo arp -v -i h0_0_1-eth1 -s 10.0.6.3 02:00:00:5b:26:55"
+    - cmd: "sudo arp -v -i h0_0_1-eth1 -s 10.0.7.2 02:00:00:5d:b1:34"
+    - cmd: "sudo arp -v -i h0_0_1-eth1 -s 10.0.7.3 02:00:00:d9:80:5b"
+  h0_1_0:
+    interfaces:
+    - mac: '02:00:00:b4:63:c9'
+      ip: 10.0.1.2/24
+      port: 1
+    programs:
+    - cmd: "echo 'Hello from' h0_1_0"
+      fg: true
+    - cmd: "sudo arp -v -i h0_1_0-eth1 -s 10.0.1.2 02:00:00:b4:63:c9"
+      fg: true
+    - cmd: "sudo route add default h0_1_0-eth1"
+      fg: true
+    - cmd: "sudo arp -v -i h0_1_0-eth1 -s 10.0.0.2 02:00:00:5f:6f:e0"
+    - cmd: "sudo arp -v -i h0_1_0-eth1 -s 10.0.0.3 02:00:00:af:dd:e3"
+    - cmd: "sudo arp -v -i h0_1_0-eth1 -s 10.0.1.2 02:00:00:b4:63:c9"
+    - cmd: "sudo arp -v -i h0_1_0-eth1 -s 10.0.1.3 02:00:00:5a:fc:39"
+    - cmd: "sudo arp -v -i h0_1_0-eth1 -s 10.0.2.2 02:00:00:3f:0d:40"
+    - cmd: "sudo arp -v -i h0_1_0-eth1 -s 10.0.2.3 02:00:00:0b:1c:6d"
+    - cmd: "sudo arp -v -i h0_1_0-eth1 -s 10.0.3.2 02:00:00:2a:c4:a9"
+    - cmd: "sudo arp -v -i h0_1_0-eth1 -s 10.0.3.3 02:00:00:71:4e:fe"
+    - cmd: "sudo arp -v -i h0_1_0-eth1 -s 10.0.4.2 02:00:00:ac:9c:70"
+    - cmd: "sudo arp -v -i h0_1_0-eth1 -s 10.0.4.3 02:00:00:ba:26:f9"
+    - cmd: "sudo arp -v -i h0_1_0-eth1 -s 10.0.5.2 02:00:00:af:1d:73"
+    - cmd: "sudo arp -v -i h0_1_0-eth1 -s 10.0.5.3 02:00:00:41:28:e4"
+    - cmd: "sudo arp -v -i h0_1_0-eth1 -s 10.0.6.2 02:00:00:72:5c:41"
+    - cmd: "sudo arp -v -i h0_1_0-eth1 -s 10.0.6.3 02:00:00:5b:26:55"
+    - cmd: "sudo arp -v -i h0_1_0-eth1 -s 10.0.7.2 02:00:00:5d:b1:34"
+    - cmd: "sudo arp -v -i h0_1_0-eth1 -s 10.0.7.3 02:00:00:d9:80:5b"
+  h0_1_1:
+    interfaces:
+    - mac: '02:00:00:5a:fc:39'
+      ip: 10.0.1.3/24
+      port: 1
+    programs:
+    - cmd: "echo 'Hello from' h0_1_1"
+      fg: true
+    - cmd: "sudo arp -v -i h0_1_1-eth1 -s 10.0.1.3 02:00:00:5a:fc:39"
+      fg: true
+    - cmd: "sudo route add default h0_1_1-eth1"
+      fg: true
+    - cmd: "sudo arp -v -i h0_1_1-eth1 -s 10.0.0.2 02:00:00:5f:6f:e0"
+    - cmd: "sudo arp -v -i h0_1_1-eth1 -s 10.0.0.3 02:00:00:af:dd:e3"
+    - cmd: "sudo arp -v -i h0_1_1-eth1 -s 10.0.1.2 02:00:00:b4:63:c9"
+    - cmd: "sudo arp -v -i h0_1_1-eth1 -s 10.0.1.3 02:00:00:5a:fc:39"
+    - cmd: "sudo arp -v -i h0_1_1-eth1 -s 10.0.2.2 02:00:00:3f:0d:40"
+    - cmd: "sudo arp -v -i h0_1_1-eth1 -s 10.0.2.3 02:00:00:0b:1c:6d"
+    - cmd: "sudo arp -v -i h0_1_1-eth1 -s 10.0.3.2 02:00:00:2a:c4:a9"
+    - cmd: "sudo arp -v -i h0_1_1-eth1 -s 10.0.3.3 02:00:00:71:4e:fe"
+    - cmd: "sudo arp -v -i h0_1_1-eth1 -s 10.0.4.2 02:00:00:ac:9c:70"
+    - cmd: "sudo arp -v -i h0_1_1-eth1 -s 10.0.4.3 02:00:00:ba:26:f9"
+    - cmd: "sudo arp -v -i h0_1_1-eth1 -s 10.0.5.2 02:00:00:af:1d:73"
+    - cmd: "sudo arp -v -i h0_1_1-eth1 -s 10.0.5.3 02:00:00:41:28:e4"
+    - cmd: "sudo arp -v -i h0_1_1-eth1 -s 10.0.6.2 02:00:00:72:5c:41"
+    - cmd: "sudo arp -v -i h0_1_1-eth1 -s 10.0.6.3 02:00:00:5b:26:55"
+    - cmd: "sudo arp -v -i h0_1_1-eth1 -s 10.0.7.2 02:00:00:5d:b1:34"
+    - cmd: "sudo arp -v -i h0_1_1-eth1 -s 10.0.7.3 02:00:00:d9:80:5b"
+  h1_0_0:
+    interfaces:
+    - mac: '02:00:00:3f:0d:40'
+      ip: 10.0.2.2/24
+      port: 1
+    programs:
+    - cmd: "echo 'Hello from' h1_0_0"
+      fg: true
+    - cmd: "sudo arp -v -i h1_0_0-eth1 -s 10.0.2.2 02:00:00:3f:0d:40"
+      fg: true
+    - cmd: "sudo route add default h1_0_0-eth1"
+      fg: true
+    - cmd: "sudo arp -v -i h1_0_0-eth1 -s 10.0.0.2 02:00:00:5f:6f:e0"
+    - cmd: "sudo arp -v -i h1_0_0-eth1 -s 10.0.0.3 02:00:00:af:dd:e3"
+    - cmd: "sudo arp -v -i h1_0_0-eth1 -s 10.0.1.2 02:00:00:b4:63:c9"
+    - cmd: "sudo arp -v -i h1_0_0-eth1 -s 10.0.1.3 02:00:00:5a:fc:39"
+    - cmd: "sudo arp -v -i h1_0_0-eth1 -s 10.0.2.2 02:00:00:3f:0d:40"
+    - cmd: "sudo arp -v -i h1_0_0-eth1 -s 10.0.2.3 02:00:00:0b:1c:6d"
+    - cmd: "sudo arp -v -i h1_0_0-eth1 -s 10.0.3.2 02:00:00:2a:c4:a9"
+    - cmd: "sudo arp -v -i h1_0_0-eth1 -s 10.0.3.3 02:00:00:71:4e:fe"
+    - cmd: "sudo arp -v -i h1_0_0-eth1 -s 10.0.4.2 02:00:00:ac:9c:70"
+    - cmd: "sudo arp -v -i h1_0_0-eth1 -s 10.0.4.3 02:00:00:ba:26:f9"
+    - cmd: "sudo arp -v -i h1_0_0-eth1 -s 10.0.5.2 02:00:00:af:1d:73"
+    - cmd: "sudo arp -v -i h1_0_0-eth1 -s 10.0.5.3 02:00:00:41:28:e4"
+    - cmd: "sudo arp -v -i h1_0_0-eth1 -s 10.0.6.2 02:00:00:72:5c:41"
+    - cmd: "sudo arp -v -i h1_0_0-eth1 -s 10.0.6.3 02:00:00:5b:26:55"
+    - cmd: "sudo arp -v -i h1_0_0-eth1 -s 10.0.7.2 02:00:00:5d:b1:34"
+    - cmd: "sudo arp -v -i h1_0_0-eth1 -s 10.0.7.3 02:00:00:d9:80:5b"
+  h1_0_1:
+    interfaces:
+    - mac: '02:00:00:0b:1c:6d'
+      ip: 10.0.2.3/24
+      port: 1
+    programs:
+    - cmd: "echo 'Hello from' h1_0_1"
+      fg: true
+    - cmd: "sudo arp -v -i h1_0_1-eth1 -s 10.0.2.3 02:00:00:0b:1c:6d"
+      fg: true
+    - cmd: "sudo route add default h1_0_1-eth1"
+      fg: true
+    - cmd: "sudo arp -v -i h1_0_1-eth1 -s 10.0.0.2 02:00:00:5f:6f:e0"
+    - cmd: "sudo arp -v -i h1_0_1-eth1 -s 10.0.0.3 02:00:00:af:dd:e3"
+    - cmd: "sudo arp -v -i h1_0_1-eth1 -s 10.0.1.2 02:00:00:b4:63:c9"
+    - cmd: "sudo arp -v -i h1_0_1-eth1 -s 10.0.1.3 02:00:00:5a:fc:39"
+    - cmd: "sudo arp -v -i h1_0_1-eth1 -s 10.0.2.2 02:00:00:3f:0d:40"
+    - cmd: "sudo arp -v -i h1_0_1-eth1 -s 10.0.2.3 02:00:00:0b:1c:6d"
+    - cmd: "sudo arp -v -i h1_0_1-eth1 -s 10.0.3.2 02:00:00:2a:c4:a9"
+    - cmd: "sudo arp -v -i h1_0_1-eth1 -s 10.0.3.3 02:00:00:71:4e:fe"
+    - cmd: "sudo arp -v -i h1_0_1-eth1 -s 10.0.4.2 02:00:00:ac:9c:70"
+    - cmd: "sudo arp -v -i h1_0_1-eth1 -s 10.0.4.3 02:00:00:ba:26:f9"
+    - cmd: "sudo arp -v -i h1_0_1-eth1 -s 10.0.5.2 02:00:00:af:1d:73"
+    - cmd: "sudo arp -v -i h1_0_1-eth1 -s 10.0.5.3 02:00:00:41:28:e4"
+    - cmd: "sudo arp -v -i h1_0_1-eth1 -s 10.0.6.2 02:00:00:72:5c:41"
+    - cmd: "sudo arp -v -i h1_0_1-eth1 -s 10.0.6.3 02:00:00:5b:26:55"
+    - cmd: "sudo arp -v -i h1_0_1-eth1 -s 10.0.7.2 02:00:00:5d:b1:34"
+    - cmd: "sudo arp -v -i h1_0_1-eth1 -s 10.0.7.3 02:00:00:d9:80:5b"
+  h1_1_0:
+    interfaces:
+    - mac: '02:00:00:2a:c4:a9'
+      ip: 10.0.3.2/24
+      port: 1
+    programs:
+    - cmd: "echo 'Hello from' h1_1_0"
+      fg: true
+    - cmd: "sudo arp -v -i h1_1_0-eth1 -s 10.0.3.2 02:00:00:2a:c4:a9"
+      fg: true
+    - cmd: "sudo route add default h1_1_0-eth1"
+      fg: true
+    - cmd: "sudo arp -v -i h1_1_0-eth1 -s 10.0.0.2 02:00:00:5f:6f:e0"
+    - cmd: "sudo arp -v -i h1_1_0-eth1 -s 10.0.0.3 02:00:00:af:dd:e3"
+    - cmd: "sudo arp -v -i h1_1_0-eth1 -s 10.0.1.2 02:00:00:b4:63:c9"
+    - cmd: "sudo arp -v -i h1_1_0-eth1 -s 10.0.1.3 02:00:00:5a:fc:39"
+    - cmd: "sudo arp -v -i h1_1_0-eth1 -s 10.0.2.2 02:00:00:3f:0d:40"
+    - cmd: "sudo arp -v -i h1_1_0-eth1 -s 10.0.2.3 02:00:00:0b:1c:6d"
+    - cmd: "sudo arp -v -i h1_1_0-eth1 -s 10.0.3.2 02:00:00:2a:c4:a9"
+    - cmd: "sudo arp -v -i h1_1_0-eth1 -s 10.0.3.3 02:00:00:71:4e:fe"
+    - cmd: "sudo arp -v -i h1_1_0-eth1 -s 10.0.4.2 02:00:00:ac:9c:70"
+    - cmd: "sudo arp -v -i h1_1_0-eth1 -s 10.0.4.3 02:00:00:ba:26:f9"
+    - cmd: "sudo arp -v -i h1_1_0-eth1 -s 10.0.5.2 02:00:00:af:1d:73"
+    - cmd: "sudo arp -v -i h1_1_0-eth1 -s 10.0.5.3 02:00:00:41:28:e4"
+    - cmd: "sudo arp -v -i h1_1_0-eth1 -s 10.0.6.2 02:00:00:72:5c:41"
+    - cmd: "sudo arp -v -i h1_1_0-eth1 -s 10.0.6.3 02:00:00:5b:26:55"
+    - cmd: "sudo arp -v -i h1_1_0-eth1 -s 10.0.7.2 02:00:00:5d:b1:34"
+    - cmd: "sudo arp -v -i h1_1_0-eth1 -s 10.0.7.3 02:00:00:d9:80:5b"
+  h1_1_1:
+    interfaces:
+    - mac: '02:00:00:71:4e:fe'
+      ip: 10.0.3.3/24
+      port: 1
+    programs:
+    - cmd: "echo 'Hello from' h1_1_1"
+      fg: true
+    - cmd: "sudo arp -v -i h1_1_1-eth1 -s 10.0.3.3 02:00:00:71:4e:fe"
+      fg: true
+    - cmd: "sudo route add default h1_1_1-eth1"
+      fg: true
+    - cmd: "sudo arp -v -i h1_1_1-eth1 -s 10.0.0.2 02:00:00:5f:6f:e0"
+    - cmd: "sudo arp -v -i h1_1_1-eth1 -s 10.0.0.3 02:00:00:af:dd:e3"
+    - cmd: "sudo arp -v -i h1_1_1-eth1 -s 10.0.1.2 02:00:00:b4:63:c9"
+    - cmd: "sudo arp -v -i h1_1_1-eth1 -s 10.0.1.3 02:00:00:5a:fc:39"
+    - cmd: "sudo arp -v -i h1_1_1-eth1 -s 10.0.2.2 02:00:00:3f:0d:40"
+    - cmd: "sudo arp -v -i h1_1_1-eth1 -s 10.0.2.3 02:00:00:0b:1c:6d"
+    - cmd: "sudo arp -v -i h1_1_1-eth1 -s 10.0.3.2 02:00:00:2a:c4:a9"
+    - cmd: "sudo arp -v -i h1_1_1-eth1 -s 10.0.3.3 02:00:00:71:4e:fe"
+    - cmd: "sudo arp -v -i h1_1_1-eth1 -s 10.0.4.2 02:00:00:ac:9c:70"
+    - cmd: "sudo arp -v -i h1_1_1-eth1 -s 10.0.4.3 02:00:00:ba:26:f9"
+    - cmd: "sudo arp -v -i h1_1_1-eth1 -s 10.0.5.2 02:00:00:af:1d:73"
+    - cmd: "sudo arp -v -i h1_1_1-eth1 -s 10.0.5.3 02:00:00:41:28:e4"
+    - cmd: "sudo arp -v -i h1_1_1-eth1 -s 10.0.6.2 02:00:00:72:5c:41"
+    - cmd: "sudo arp -v -i h1_1_1-eth1 -s 10.0.6.3 02:00:00:5b:26:55"
+    - cmd: "sudo arp -v -i h1_1_1-eth1 -s 10.0.7.2 02:00:00:5d:b1:34"
+    - cmd: "sudo arp -v -i h1_1_1-eth1 -s 10.0.7.3 02:00:00:d9:80:5b"
+  h2_0_0:
+    interfaces:
+    - mac: '02:00:00:ac:9c:70'
+      ip: 10.0.4.2/24
+      port: 1
+    programs:
+    - cmd: "echo 'Hello from' h2_0_0"
+      fg: true
+    - cmd: "sudo arp -v -i h2_0_0-eth1 -s 10.0.4.2 02:00:00:ac:9c:70"
+      fg: true
+    - cmd: "sudo route add default h2_0_0-eth1"
+      fg: true
+    - cmd: "sudo arp -v -i h2_0_0-eth1 -s 10.0.0.2 02:00:00:5f:6f:e0"
+    - cmd: "sudo arp -v -i h2_0_0-eth1 -s 10.0.0.3 02:00:00:af:dd:e3"
+    - cmd: "sudo arp -v -i h2_0_0-eth1 -s 10.0.1.2 02:00:00:b4:63:c9"
+    - cmd: "sudo arp -v -i h2_0_0-eth1 -s 10.0.1.3 02:00:00:5a:fc:39"
+    - cmd: "sudo arp -v -i h2_0_0-eth1 -s 10.0.2.2 02:00:00:3f:0d:40"
+    - cmd: "sudo arp -v -i h2_0_0-eth1 -s 10.0.2.3 02:00:00:0b:1c:6d"
+    - cmd: "sudo arp -v -i h2_0_0-eth1 -s 10.0.3.2 02:00:00:2a:c4:a9"
+    - cmd: "sudo arp -v -i h2_0_0-eth1 -s 10.0.3.3 02:00:00:71:4e:fe"
+    - cmd: "sudo arp -v -i h2_0_0-eth1 -s 10.0.4.2 02:00:00:ac:9c:70"
+    - cmd: "sudo arp -v -i h2_0_0-eth1 -s 10.0.4.3 02:00:00:ba:26:f9"
+    - cmd: "sudo arp -v -i h2_0_0-eth1 -s 10.0.5.2 02:00:00:af:1d:73"
+    - cmd: "sudo arp -v -i h2_0_0-eth1 -s 10.0.5.3 02:00:00:41:28:e4"
+    - cmd: "sudo arp -v -i h2_0_0-eth1 -s 10.0.6.2 02:00:00:72:5c:41"
+    - cmd: "sudo arp -v -i h2_0_0-eth1 -s 10.0.6.3 02:00:00:5b:26:55"
+    - cmd: "sudo arp -v -i h2_0_0-eth1 -s 10.0.7.2 02:00:00:5d:b1:34"
+    - cmd: "sudo arp -v -i h2_0_0-eth1 -s 10.0.7.3 02:00:00:d9:80:5b"
+  h2_0_1:
+    interfaces:
+    - mac: '02:00:00:ba:26:f9'
+      ip: 10.0.4.3/24
+      port: 1
+    programs:
+    - cmd: "echo 'Hello from' h2_0_1"
+      fg: true
+    - cmd: "sudo arp -v -i h2_0_1-eth1 -s 10.0.4.3 02:00:00:ba:26:f9"
+      fg: true
+    - cmd: "sudo route add default h2_0_1-eth1"
+      fg: true
+    - cmd: "sudo arp -v -i h2_0_1-eth1 -s 10.0.0.2 02:00:00:5f:6f:e0"
+    - cmd: "sudo arp -v -i h2_0_1-eth1 -s 10.0.0.3 02:00:00:af:dd:e3"
+    - cmd: "sudo arp -v -i h2_0_1-eth1 -s 10.0.1.2 02:00:00:b4:63:c9"
+    - cmd: "sudo arp -v -i h2_0_1-eth1 -s 10.0.1.3 02:00:00:5a:fc:39"
+    - cmd: "sudo arp -v -i h2_0_1-eth1 -s 10.0.2.2 02:00:00:3f:0d:40"
+    - cmd: "sudo arp -v -i h2_0_1-eth1 -s 10.0.2.3 02:00:00:0b:1c:6d"
+    - cmd: "sudo arp -v -i h2_0_1-eth1 -s 10.0.3.2 02:00:00:2a:c4:a9"
+    - cmd: "sudo arp -v -i h2_0_1-eth1 -s 10.0.3.3 02:00:00:71:4e:fe"
+    - cmd: "sudo arp -v -i h2_0_1-eth1 -s 10.0.4.2 02:00:00:ac:9c:70"
+    - cmd: "sudo arp -v -i h2_0_1-eth1 -s 10.0.4.3 02:00:00:ba:26:f9"
+    - cmd: "sudo arp -v -i h2_0_1-eth1 -s 10.0.5.2 02:00:00:af:1d:73"
+    - cmd: "sudo arp -v -i h2_0_1-eth1 -s 10.0.5.3 02:00:00:41:28:e4"
+    - cmd: "sudo arp -v -i h2_0_1-eth1 -s 10.0.6.2 02:00:00:72:5c:41"
+    - cmd: "sudo arp -v -i h2_0_1-eth1 -s 10.0.6.3 02:00:00:5b:26:55"
+    - cmd: "sudo arp -v -i h2_0_1-eth1 -s 10.0.7.2 02:00:00:5d:b1:34"
+    - cmd: "sudo arp -v -i h2_0_1-eth1 -s 10.0.7.3 02:00:00:d9:80:5b"
+  h2_1_0:
+    interfaces:
+    - mac: '02:00:00:af:1d:73'
+      ip: 10.0.5.2/24
+      port: 1
+    programs:
+    - cmd: "echo 'Hello from' h2_1_0"
+      fg: true
+    - cmd: "sudo arp -v -i h2_1_0-eth1 -s 10.0.5.2 02:00:00:af:1d:73"
+      fg: true
+    - cmd: "sudo route add default h2_1_0-eth1"
+      fg: true
+    - cmd: "sudo arp -v -i h2_1_0-eth1 -s 10.0.0.2 02:00:00:5f:6f:e0"
+    - cmd: "sudo arp -v -i h2_1_0-eth1 -s 10.0.0.3 02:00:00:af:dd:e3"
+    - cmd: "sudo arp -v -i h2_1_0-eth1 -s 10.0.1.2 02:00:00:b4:63:c9"
+    - cmd: "sudo arp -v -i h2_1_0-eth1 -s 10.0.1.3 02:00:00:5a:fc:39"
+    - cmd: "sudo arp -v -i h2_1_0-eth1 -s 10.0.2.2 02:00:00:3f:0d:40"
+    - cmd: "sudo arp -v -i h2_1_0-eth1 -s 10.0.2.3 02:00:00:0b:1c:6d"
+    - cmd: "sudo arp -v -i h2_1_0-eth1 -s 10.0.3.2 02:00:00:2a:c4:a9"
+    - cmd: "sudo arp -v -i h2_1_0-eth1 -s 10.0.3.3 02:00:00:71:4e:fe"
+    - cmd: "sudo arp -v -i h2_1_0-eth1 -s 10.0.4.2 02:00:00:ac:9c:70"
+    - cmd: "sudo arp -v -i h2_1_0-eth1 -s 10.0.4.3 02:00:00:ba:26:f9"
+    - cmd: "sudo arp -v -i h2_1_0-eth1 -s 10.0.5.2 02:00:00:af:1d:73"
+    - cmd: "sudo arp -v -i h2_1_0-eth1 -s 10.0.5.3 02:00:00:41:28:e4"
+    - cmd: "sudo arp -v -i h2_1_0-eth1 -s 10.0.6.2 02:00:00:72:5c:41"
+    - cmd: "sudo arp -v -i h2_1_0-eth1 -s 10.0.6.3 02:00:00:5b:26:55"
+    - cmd: "sudo arp -v -i h2_1_0-eth1 -s 10.0.7.2 02:00:00:5d:b1:34"
+    - cmd: "sudo arp -v -i h2_1_0-eth1 -s 10.0.7.3 02:00:00:d9:80:5b"
+  h2_1_1:
+    interfaces:
+    - mac: '02:00:00:41:28:e4'
+      ip: 10.0.5.3/24
+      port: 1
+    programs:
+    - cmd: "echo 'Hello from' h2_1_1"
+      fg: true
+    - cmd: "sudo arp -v -i h2_1_1-eth1 -s 10.0.5.3 02:00:00:41:28:e4"
+      fg: true
+    - cmd: "sudo route add default h2_1_1-eth1"
+      fg: true
+    - cmd: "sudo arp -v -i h2_1_1-eth1 -s 10.0.0.2 02:00:00:5f:6f:e0"
+    - cmd: "sudo arp -v -i h2_1_1-eth1 -s 10.0.0.3 02:00:00:af:dd:e3"
+    - cmd: "sudo arp -v -i h2_1_1-eth1 -s 10.0.1.2 02:00:00:b4:63:c9"
+    - cmd: "sudo arp -v -i h2_1_1-eth1 -s 10.0.1.3 02:00:00:5a:fc:39"
+    - cmd: "sudo arp -v -i h2_1_1-eth1 -s 10.0.2.2 02:00:00:3f:0d:40"
+    - cmd: "sudo arp -v -i h2_1_1-eth1 -s 10.0.2.3 02:00:00:0b:1c:6d"
+    - cmd: "sudo arp -v -i h2_1_1-eth1 -s 10.0.3.2 02:00:00:2a:c4:a9"
+    - cmd: "sudo arp -v -i h2_1_1-eth1 -s 10.0.3.3 02:00:00:71:4e:fe"
+    - cmd: "sudo arp -v -i h2_1_1-eth1 -s 10.0.4.2 02:00:00:ac:9c:70"
+    - cmd: "sudo arp -v -i h2_1_1-eth1 -s 10.0.4.3 02:00:00:ba:26:f9"
+    - cmd: "sudo arp -v -i h2_1_1-eth1 -s 10.0.5.2 02:00:00:af:1d:73"
+    - cmd: "sudo arp -v -i h2_1_1-eth1 -s 10.0.5.3 02:00:00:41:28:e4"
+    - cmd: "sudo arp -v -i h2_1_1-eth1 -s 10.0.6.2 02:00:00:72:5c:41"
+    - cmd: "sudo arp -v -i h2_1_1-eth1 -s 10.0.6.3 02:00:00:5b:26:55"
+    - cmd: "sudo arp -v -i h2_1_1-eth1 -s 10.0.7.2 02:00:00:5d:b1:34"
+    - cmd: "sudo arp -v -i h2_1_1-eth1 -s 10.0.7.3 02:00:00:d9:80:5b"
+  h3_0_0:
+    interfaces:
+    - mac: '02:00:00:72:5c:41'
+      ip: 10.0.6.2/24
+      port: 1
+    programs:
+    - cmd: "echo 'Hello from' h3_0_0"
+      fg: true
+    - cmd: "sudo arp -v -i h3_0_0-eth1 -s 10.0.6.2 02:00:00:72:5c:41"
+      fg: true
+    - cmd: "sudo route add default h3_0_0-eth1"
+      fg: true
+    - cmd: "sudo arp -v -i h3_0_0-eth1 -s 10.0.0.2 02:00:00:5f:6f:e0"
+    - cmd: "sudo arp -v -i h3_0_0-eth1 -s 10.0.0.3 02:00:00:af:dd:e3"
+    - cmd: "sudo arp -v -i h3_0_0-eth1 -s 10.0.1.2 02:00:00:b4:63:c9"
+    - cmd: "sudo arp -v -i h3_0_0-eth1 -s 10.0.1.3 02:00:00:5a:fc:39"
+    - cmd: "sudo arp -v -i h3_0_0-eth1 -s 10.0.2.2 02:00:00:3f:0d:40"
+    - cmd: "sudo arp -v -i h3_0_0-eth1 -s 10.0.2.3 02:00:00:0b:1c:6d"
+    - cmd: "sudo arp -v -i h3_0_0-eth1 -s 10.0.3.2 02:00:00:2a:c4:a9"
+    - cmd: "sudo arp -v -i h3_0_0-eth1 -s 10.0.3.3 02:00:00:71:4e:fe"
+    - cmd: "sudo arp -v -i h3_0_0-eth1 -s 10.0.4.2 02:00:00:ac:9c:70"
+    - cmd: "sudo arp -v -i h3_0_0-eth1 -s 10.0.4.3 02:00:00:ba:26:f9"
+    - cmd: "sudo arp -v -i h3_0_0-eth1 -s 10.0.5.2 02:00:00:af:1d:73"
+    - cmd: "sudo arp -v -i h3_0_0-eth1 -s 10.0.5.3 02:00:00:41:28:e4"
+    - cmd: "sudo arp -v -i h3_0_0-eth1 -s 10.0.6.2 02:00:00:72:5c:41"
+    - cmd: "sudo arp -v -i h3_0_0-eth1 -s 10.0.6.3 02:00:00:5b:26:55"
+    - cmd: "sudo arp -v -i h3_0_0-eth1 -s 10.0.7.2 02:00:00:5d:b1:34"
+    - cmd: "sudo arp -v -i h3_0_0-eth1 -s 10.0.7.3 02:00:00:d9:80:5b"
+  h3_0_1:
+    interfaces:
+    - mac: '02:00:00:5b:26:55'
+      ip: 10.0.6.3/24
+      port: 1
+    programs:
+    - cmd: "echo 'Hello from' h3_0_1"
+      fg: true
+    - cmd: "sudo arp -v -i h3_0_1-eth1 -s 10.0.6.3 02:00:00:5b:26:55"
+      fg: true
+    - cmd: "sudo route add default h3_0_1-eth1"
+      fg: true
+    - cmd: "sudo arp -v -i h3_0_1-eth1 -s 10.0.0.2 02:00:00:5f:6f:e0"
+    - cmd: "sudo arp -v -i h3_0_1-eth1 -s 10.0.0.3 02:00:00:af:dd:e3"
+    - cmd: "sudo arp -v -i h3_0_1-eth1 -s 10.0.1.2 02:00:00:b4:63:c9"
+    - cmd: "sudo arp -v -i h3_0_1-eth1 -s 10.0.1.3 02:00:00:5a:fc:39"
+    - cmd: "sudo arp -v -i h3_0_1-eth1 -s 10.0.2.2 02:00:00:3f:0d:40"
+    - cmd: "sudo arp -v -i h3_0_1-eth1 -s 10.0.2.3 02:00:00:0b:1c:6d"
+    - cmd: "sudo arp -v -i h3_0_1-eth1 -s 10.0.3.2 02:00:00:2a:c4:a9"
+    - cmd: "sudo arp -v -i h3_0_1-eth1 -s 10.0.3.3 02:00:00:71:4e:fe"
+    - cmd: "sudo arp -v -i h3_0_1-eth1 -s 10.0.4.2 02:00:00:ac:9c:70"
+    - cmd: "sudo arp -v -i h3_0_1-eth1 -s 10.0.4.3 02:00:00:ba:26:f9"
+    - cmd: "sudo arp -v -i h3_0_1-eth1 -s 10.0.5.2 02:00:00:af:1d:73"
+    - cmd: "sudo arp -v -i h3_0_1-eth1 -s 10.0.5.3 02:00:00:41:28:e4"
+    - cmd: "sudo arp -v -i h3_0_1-eth1 -s 10.0.6.2 02:00:00:72:5c:41"
+    - cmd: "sudo arp -v -i h3_0_1-eth1 -s 10.0.6.3 02:00:00:5b:26:55"
+    - cmd: "sudo arp -v -i h3_0_1-eth1 -s 10.0.7.2 02:00:00:5d:b1:34"
+    - cmd: "sudo arp -v -i h3_0_1-eth1 -s 10.0.7.3 02:00:00:d9:80:5b"
+  h3_1_0:
+    interfaces:
+    - mac: '02:00:00:5d:b1:34'
+      ip: 10.0.7.2/24
+      port: 1
+    programs:
+    - cmd: "echo 'Hello from' h3_1_0"
+      fg: true
+    - cmd: "sudo arp -v -i h3_1_0-eth1 -s 10.0.7.2 02:00:00:5d:b1:34"
+      fg: true
+    - cmd: "sudo route add default h3_1_0-eth1"
+      fg: true
+    - cmd: "sudo arp -v -i h3_1_0-eth1 -s 10.0.0.2 02:00:00:5f:6f:e0"
+    - cmd: "sudo arp -v -i h3_1_0-eth1 -s 10.0.0.3 02:00:00:af:dd:e3"
+    - cmd: "sudo arp -v -i h3_1_0-eth1 -s 10.0.1.2 02:00:00:b4:63:c9"
+    - cmd: "sudo arp -v -i h3_1_0-eth1 -s 10.0.1.3 02:00:00:5a:fc:39"
+    - cmd: "sudo arp -v -i h3_1_0-eth1 -s 10.0.2.2 02:00:00:3f:0d:40"
+    - cmd: "sudo arp -v -i h3_1_0-eth1 -s 10.0.2.3 02:00:00:0b:1c:6d"
+    - cmd: "sudo arp -v -i h3_1_0-eth1 -s 10.0.3.2 02:00:00:2a:c4:a9"
+    - cmd: "sudo arp -v -i h3_1_0-eth1 -s 10.0.3.3 02:00:00:71:4e:fe"
+    - cmd: "sudo arp -v -i h3_1_0-eth1 -s 10.0.4.2 02:00:00:ac:9c:70"
+    - cmd: "sudo arp -v -i h3_1_0-eth1 -s 10.0.4.3 02:00:00:ba:26:f9"
+    - cmd: "sudo arp -v -i h3_1_0-eth1 -s 10.0.5.2 02:00:00:af:1d:73"
+    - cmd: "sudo arp -v -i h3_1_0-eth1 -s 10.0.5.3 02:00:00:41:28:e4"
+    - cmd: "sudo arp -v -i h3_1_0-eth1 -s 10.0.6.2 02:00:00:72:5c:41"
+    - cmd: "sudo arp -v -i h3_1_0-eth1 -s 10.0.6.3 02:00:00:5b:26:55"
+    - cmd: "sudo arp -v -i h3_1_0-eth1 -s 10.0.7.2 02:00:00:5d:b1:34"
+    - cmd: "sudo arp -v -i h3_1_0-eth1 -s 10.0.7.3 02:00:00:d9:80:5b"
+  h3_1_1:
+    interfaces:
+    - mac: '02:00:00:d9:80:5b'
+      ip: 10.0.7.3/24
+      port: 1
+    programs:
+    - cmd: "echo 'Hello from' h3_1_1"
+      fg: true
+    - cmd: "sudo arp -v -i h3_1_1-eth1 -s 10.0.7.3 02:00:00:d9:80:5b"
+      fg: true
+    - cmd: "sudo route add default h3_1_1-eth1"
+      fg: true
+    - cmd: "sudo arp -v -i h3_1_1-eth1 -s 10.0.0.2 02:00:00:5f:6f:e0"
+    - cmd: "sudo arp -v -i h3_1_1-eth1 -s 10.0.0.3 02:00:00:af:dd:e3"
+    - cmd: "sudo arp -v -i h3_1_1-eth1 -s 10.0.1.2 02:00:00:b4:63:c9"
+    - cmd: "sudo arp -v -i h3_1_1-eth1 -s 10.0.1.3 02:00:00:5a:fc:39"
+    - cmd: "sudo arp -v -i h3_1_1-eth1 -s 10.0.2.2 02:00:00:3f:0d:40"
+    - cmd: "sudo arp -v -i h3_1_1-eth1 -s 10.0.2.3 02:00:00:0b:1c:6d"
+    - cmd: "sudo arp -v -i h3_1_1-eth1 -s 10.0.3.2 02:00:00:2a:c4:a9"
+    - cmd: "sudo arp -v -i h3_1_1-eth1 -s 10.0.3.3 02:00:00:71:4e:fe"
+    - cmd: "sudo arp -v -i h3_1_1-eth1 -s 10.0.4.2 02:00:00:ac:9c:70"
+    - cmd: "sudo arp -v -i h3_1_1-eth1 -s 10.0.4.3 02:00:00:ba:26:f9"
+    - cmd: "sudo arp -v -i h3_1_1-eth1 -s 10.0.5.2 02:00:00:af:1d:73"
+    - cmd: "sudo arp -v -i h3_1_1-eth1 -s 10.0.5.3 02:00:00:41:28:e4"
+    - cmd: "sudo arp -v -i h3_1_1-eth1 -s 10.0.6.2 02:00:00:72:5c:41"
+    - cmd: "sudo arp -v -i h3_1_1-eth1 -s 10.0.6.3 02:00:00:5b:26:55"
+    - cmd: "sudo arp -v -i h3_1_1-eth1 -s 10.0.7.2 02:00:00:5d:b1:34"
+    - cmd: "sudo arp -v -i h3_1_1-eth1 -s 10.0.7.3 02:00:00:d9:80:5b"
+switches:
+  a0_0:
+    cfg: ../../build/BMv2/networks/hula/hula.json
+    interfaces:
+    - link: c0
+      mac: '02:00:00:36:65:f1'
+      port: 1
+    - link: c1
+      mac: '02:00:00:28:48:84'
+      port: 2
+    - link: l0_0
+      mac: '02:00:00:7a:3c:85'
+      port: 3
+    - link: l0_1
+      mac: '02:00:00:37:9e:b7'
+      port: 4
+    cmds:
+    - table_add hula_tbl hula_logic 0x90 =>
+    - table_add hula_mcast h_mcast 224.0.0.1 =>
+    - table_add swtrace add_swtrace => 2
+    programs:
+    - "simple_switch_CLI --thrift-port 9090 < ./a.cmd"
+  a0_1:
+    cfg: ../../build/BMv2/networks/hula/hula.json
+    interfaces:
+    - link: c2
+      mac: '02:00:00:30:fe:06'
+      port: 1
+    - link: c3
+      mac: '02:00:00:45:0a:40'
+      port: 2
+    - link: l0_0
+      mac: '02:00:00:f1:64:b5'
+      port: 3
+    - link: l0_1
+      mac: '02:00:00:ef:32:93'
+      port: 4
+    cmds:
+    - table_add hula_tbl hula_logic 0x90 =>
+    - table_add hula_mcast h_mcast 224.0.0.1 =>
+    - table_add swtrace add_swtrace => 3
+    programs:
+    - "simple_switch_CLI --thrift-port 9091 < ./a.cmd"
+  a1_0:
+    cfg: ../../build/BMv2/networks/hula/hula.json
+    interfaces:
+    - link: c0
+      mac: '02:00:00:af:d7:69'
+      port: 1
+    - link: c1
+      mac: '02:00:00:89:da:ca'
+      port: 2
+    - link: l1_0
+      mac: '02:00:00:eb:0d:0f'
+      port: 3
+    - link: l1_1
+      mac: '02:00:00:d8:39:6b'
+      port: 4
+    cmds:
+    - table_add hula_tbl hula_logic 0x90 =>
+    - table_add hula_mcast h_mcast 224.0.0.1 =>
+    - table_add swtrace add_swtrace => 6
+    programs:
+    - "simple_switch_CLI --thrift-port 9092 < ./a.cmd"
+  a1_1:
+    cfg: ../../build/BMv2/networks/hula/hula.json
+    interfaces:
+    - link: c2
+      mac: '02:00:00:b2:4b:5c'
+      port: 1
+    - link: c3
+      mac: '02:00:00:25:4a:56'
+      port: 2
+    - link: l1_0
+      mac: '02:00:00:5e:1a:f7'
+      port: 3
+    - link: l1_1
+      mac: '02:00:00:1c:08:31'
+      port: 4
+    cmds:
+    - table_add hula_tbl hula_logic 0x90 =>
+    - table_add hula_mcast h_mcast 224.0.0.1 =>
+    - table_add swtrace add_swtrace => 7
+    programs:
+    - "simple_switch_CLI --thrift-port 9093 < ./a.cmd"
+  a2_0:
+    cfg: ../../build/BMv2/networks/hula/hula.json
+    interfaces:
+    - link: c0
+      mac: '02:00:00:74:2c:5a'
+      port: 1
+    - link: c1
+      mac: '02:00:00:7d:01:c7'
+      port: 2
+    - link: l2_0
+      mac: '02:00:00:3a:a7:1e'
+      port: 3
+    - link: l2_1
+      mac: '02:00:00:f1:59:a5'
+      port: 4
+    cmds:
+    - table_add hula_tbl hula_logic 0x90 =>
+    - table_add hula_mcast h_mcast 224.0.0.1 =>
+    - table_add swtrace add_swtrace => 10
+    programs:
+    - "simple_switch_CLI --thrift-port 9094 < ./a.cmd"
+  a2_1:
+    cfg: ../../build/BMv2/networks/hula/hula.json
+    interfaces:
+    - link: c2
+      mac: '02:00:00:77:e9:f8'
+      port: 1
+    - link: c3
+      mac: '02:00:00:46:ca:05'
+      port: 2
+    - link: l2_0
+      mac: '02:00:00:81:49:17'
+      port: 3
+    - link: l2_1
+      mac: '02:00:00:bb:22:1d'
+      port: 4
+    cmds:
+    - table_add hula_tbl hula_logic 0x90 =>
+    - table_add hula_mcast h_mcast 224.0.0.1 =>
+    - table_add swtrace add_swtrace => 11
+    programs:
+    - "simple_switch_CLI --thrift-port 9095 < ./a.cmd"
+  a3_0:
+    cfg: ../../build/BMv2/networks/hula/hula.json
+    interfaces:
+    - link: c0
+      mac: '02:00:00:a3:7b:17'
+      port: 1
+    - link: c1
+      mac: '02:00:00:09:1b:b4'
+      port: 2
+    - link: l3_0
+      mac: '02:00:00:89:83:7e'
+      port: 3
+    - link: l3_1
+      mac: '02:00:00:37:87:b8'
+      port: 4
+    cmds:
+    - table_add hula_tbl hula_logic 0x90 =>
+    - table_add hula_mcast h_mcast 224.0.0.1 =>
+    - table_add swtrace add_swtrace => 14
+    programs:
+    - "simple_switch_CLI --thrift-port 9096 < ./a.cmd"
+  a3_1:
+    cfg: ../../build/BMv2/networks/hula/hula.json
+    interfaces:
+    - link: c2
+      mac: '02:00:00:f4:c4:e8'
+      port: 1
+    - link: c3
+      mac: '02:00:00:6a:5c:10'
+      port: 2
+    - link: l3_0
+      mac: '02:00:00:1e:f6:27'
+      port: 3
+    - link: l3_1
+      mac: '02:00:00:1e:2a:93'
+      port: 4
+    cmds:
+    - table_add hula_tbl hula_logic 0x90 =>
+    - table_add hula_mcast h_mcast 224.0.0.1 =>
+    - table_add swtrace add_swtrace => 15
+    programs:
+    - "simple_switch_CLI --thrift-port 9097 < ./a.cmd"
+  c0:
+    cfg: ../../build/BMv2/networks/hula/hula.json
+    interfaces:
+    - link: a0_0
+      mac: '02:00:00:de:59:69'
+      port: 1
+    - link: a1_0
+      mac: '02:00:00:98:47:67'
+      port: 2
+    - link: a2_0
+      mac: '02:00:00:a7:ad:e9'
+      port: 3
+    - link: a3_0
+      mac: '02:00:00:97:3f:e0'
+      port: 4
+    cmds:
+    - table_add hula_tbl hula_logic 0x90 =>
+    - table_add hula_mcast h_mcast 224.0.0.1 =>
+    - table_add swtrace add_swtrace => 16
+    programs:
+    - "simple_switch_CLI --thrift-port 9098 < ./c.cmd"
+  c1:
+    cfg: ../../build/BMv2/networks/hula/hula.json
+    interfaces:
+    - link: a0_0
+      mac: '02:00:00:fe:8a:3d'
+      port: 1
+    - link: a1_0
+      mac: '02:00:00:59:82:fc'
+      port: 2
+    - link: a2_0
+      mac: '02:00:00:49:2e:d9'
+      port: 3
+    - link: a3_0
+      mac: '02:00:00:24:2d:d8'
+      port: 4
+    cmds:
+    - table_add hula_tbl hula_logic 0x90 =>
+    - table_add hula_mcast h_mcast 224.0.0.1 =>
+    - table_add swtrace add_swtrace => 17
+    programs:
+    - "simple_switch_CLI --thrift-port 9099 < ./c.cmd"
+  c2:
+    cfg: ../../build/BMv2/networks/hula/hula.json
+    interfaces:
+    - link: a0_1
+      mac: '02:00:00:de:ba:c2'
+      port: 1
+    - link: a1_1
+      mac: '02:00:00:ed:fb:fe'
+      port: 2
+    - link: a2_1
+      mac: '02:00:00:01:ab:ee'
+      port: 3
+    - link: a3_1
+      mac: '02:00:00:40:a5:ff'
+      port: 4
+    cmds:
+    - table_add hula_tbl hula_logic 0x90 =>
+    - table_add hula_mcast h_mcast 224.0.0.1 =>
+    - table_add swtrace add_swtrace => 18
+    programs:
+    - "simple_switch_CLI --thrift-port 9100 < ./c.cmd"
+  c3:
+    cfg: ../../build/BMv2/networks/hula/hula.json
+    interfaces:
+    - link: a0_1
+      mac: '02:00:00:00:3e:11'
+      port: 1
+    - link: a1_1
+      mac: '02:00:00:bf:9e:30'
+      port: 2
+    - link: a2_1
+      mac: '02:00:00:cd:29:95'
+      port: 3
+    - link: a3_1
+      mac: '02:00:00:d6:be:cb'
+      port: 4
+    cmds:
+    - table_add hula_tbl hula_logic 0x90 =>
+    - table_add hula_mcast h_mcast 224.0.0.1 =>
+    - table_add swtrace add_swtrace => 19
+    programs:
+    - "simple_switch_CLI --thrift-port 9101 < ./c.cmd"
+  l0_0:
+    cfg: ../../build/BMv2/networks/hula/hula.json
+    interfaces:
+    - link: a0_0
+      mac: '02:00:00:a3:b0:d7'
+      port: 1
+    - link: a0_1
+      mac: '02:00:00:c2:92:17'
+      port: 2
+    - link: h0_0_0
+      mac: '02:00:00:62:85:1d'
+      port: 3
+    - link: h0_0_1
+      mac: '02:00:00:20:cd:6d'
+      port: 4
+    cmds:
+    - table_add hula_tbl hula_logic 0x90 =>
+    - table_add hula_mcast h_mcast 224.0.0.1 =>
+    - table_add swtrace add_swtrace => 0
+    - table_add edge_forward simple_forward 10.0.0.2 => 3
+    - table_add edge_forward simple_forward 10.0.0.3 => 4
+    programs:
+    - "simple_switch_CLI --thrift-port 9102 < ./l0_0.cmd"
+    - "chmod u+x generate_probe.py"
+    - "sudo python3 ./generate_probe.py -i l0_0 -d 0"
+  l0_1:
+    cfg: ../../build/BMv2/networks/hula/hula.json
+    interfaces:
+    - link: a0_0
+      mac: '02:00:00:1b:a0:a1'
+      port: 1
+    - link: a0_1
+      mac: '02:00:00:13:7c:e6'
+      port: 2
+    - link: h0_1_0
+      mac: '02:00:00:c1:19:e8'
+      port: 3
+    - link: h0_1_1
+      mac: '02:00:00:19:e7:77'
+      port: 4
+    cmds:
+    - table_add hula_tbl hula_logic 0x90 =>
+    - table_add hula_mcast h_mcast 224.0.0.1 =>
+    - table_add swtrace add_swtrace => 1
+    - table_add edge_forward simple_forward 10.0.1.2 => 3
+    - table_add edge_forward simple_forward 10.0.1.3 => 4
+    programs:
+    - "simple_switch_CLI --thrift-port 9103 < ./l0_1.cmd"
+    - "chmod u+x generate_probe.py"
+    - "sudo python3 ./generate_probe.py -i l0_1 -d 1"
+  l1_0:
+    cfg: ../../build/BMv2/networks/hula/hula.json
+    interfaces:
+    - link: a1_0
+      mac: '02:00:00:cf:1e:0e'
+      port: 1
+    - link: a1_1
+      mac: '02:00:00:6b:c4:b3'
+      port: 2
+    - link: h1_0_0
+      mac: '02:00:00:b4:cb:6f'
+      port: 3
+    - link: h1_0_1
+      mac: '02:00:00:85:6a:d6'
+      port: 4
+    cmds:
+    - table_add hula_tbl hula_logic 0x90 =>
+    - table_add hula_mcast h_mcast 224.0.0.1 =>
+    - table_add swtrace add_swtrace => 4
+    - table_add edge_forward simple_forward 10.0.2.2 => 3
+    - table_add edge_forward simple_forward 10.0.2.3 => 4
+    programs:
+    - "simple_switch_CLI --thrift-port 9104 < ./l1_0.cmd"
+    - "chmod u+x generate_probe.py"
+    - "sudo python3 ./generate_probe.py -i l1_0 -d 2"
+  l1_1:
+    cfg: ../../build/BMv2/networks/hula/hula.json
+    interfaces:
+    - link: a1_0
+      mac: '02:00:00:90:0e:8a'
+      port: 1
+    - link: a1_1
+      mac: '02:00:00:97:4d:76'
+      port: 2
+    - link: h1_1_0
+      mac: '02:00:00:33:37:93'
+      port: 3
+    - link: h1_1_1
+      mac: '02:00:00:00:4d:0f'
+      port: 4
+    cmds:
+    - table_add hula_tbl hula_logic 0x90 =>
+    - table_add hula_mcast h_mcast 224.0.0.1 =>
+    - table_add swtrace add_swtrace => 5
+    - table_add edge_forward simple_forward 10.0.3.2 => 3
+    - table_add edge_forward simple_forward 10.0.3.3 => 4
+    programs:
+    - "simple_switch_CLI --thrift-port 9105 < ./l1_1.cmd"
+    - "chmod u+x generate_probe.py"
+    - "sudo python3 ./generate_probe.py -i l1_1 -d 3"
+  l2_0:
+    cfg: ../../build/BMv2/networks/hula/hula.json
+    interfaces:
+    - link: a2_0
+      mac: '02:00:00:d3:f0:79'
+      port: 1
+    - link: a2_1
+      mac: '02:00:00:a3:cd:11'
+      port: 2
+    - link: h2_0_0
+      mac: '02:00:00:8f:d2:1b'
+      port: 3
+    - link: h2_0_1
+      mac: '02:00:00:c7:21:b4'
+      port: 4
+    cmds:
+    - table_add hula_tbl hula_logic 0x90 =>
+    - table_add hula_mcast h_mcast 224.0.0.1 =>
+    - table_add swtrace add_swtrace => 8
+    - table_add edge_forward simple_forward 10.0.4.2 => 3
+    - table_add edge_forward simple_forward 10.0.4.3 => 4
+    programs:
+    - "simple_switch_CLI --thrift-port 9106 < ./l2_0.cmd"
+    - "chmod u+x generate_probe.py"
+    - "sudo python3 ./generate_probe.py -i l2_0 -d 4"
+  l2_1:
+    cfg: ../../build/BMv2/networks/hula/hula.json
+    interfaces:
+    - link: a2_0
+      mac: '02:00:00:a8:53:19'
+      port: 1
+    - link: a2_1
+      mac: '02:00:00:33:32:bd'
+      port: 2
+    - link: h2_1_0
+      mac: '02:00:00:99:ff:10'
+      port: 3
+    - link: h2_1_1
+      mac: '02:00:00:fd:38:f1'
+      port: 4
+    cmds:
+    - table_add hula_tbl hula_logic 0x90 =>
+    - table_add hula_mcast h_mcast 224.0.0.1 =>
+    - table_add swtrace add_swtrace => 9
+    - table_add edge_forward simple_forward 10.0.5.2 => 3
+    - table_add edge_forward simple_forward 10.0.5.3 => 4
+    programs:
+    - "simple_switch_CLI --thrift-port 9107 < ./l2_1.cmd"
+    - "chmod u+x generate_probe.py"
+    - "sudo python3 ./generate_probe.py -i l2_1 -d 5"
+  l3_0:
+    cfg: ../../build/BMv2/networks/hula/hula.json
+    interfaces:
+    - link: a3_0
+      mac: '02:00:00:e2:b5:8e'
+      port: 1
+    - link: a3_1
+      mac: '02:00:00:84:99:59'
+      port: 2
+    - link: h3_0_0
+      mac: '02:00:00:30:fa:a1'
+      port: 3
+    - link: h3_0_1
+      mac: '02:00:00:0d:bc:e2'
+      port: 4
+    cmds:
+    - table_add hula_tbl hula_logic 0x90 =>
+    - table_add hula_mcast h_mcast 224.0.0.1 =>
+    - table_add swtrace add_swtrace => 12
+    - table_add edge_forward simple_forward 10.0.6.2 => 3
+    - table_add edge_forward simple_forward 10.0.6.3 => 4
+    programs:
+    - "simple_switch_CLI --thrift-port 9108 < ./l3_0.cmd"
+    - "chmod u+x generate_probe.py"
+    - "sudo python3 ./generate_probe.py -i l3_0 -d 6"
+  l3_1:
+    cfg: ../../build/BMv2/networks/hula/hula.json
+    interfaces:
+    - link: a3_0
+      mac: '02:00:00:91:61:51'
+      port: 1
+    - link: a3_1
+      mac: '02:00:00:2c:7f:6d'
+      port: 2
+    - link: h3_1_0
+      mac: '02:00:00:c6:ea:20'
+      port: 3
+    - link: h3_1_1
+      mac: '02:00:00:69:10:b4'
+      port: 4
+    cmds:
+    - table_add hula_tbl hula_logic 0x90 =>
+    - table_add hula_mcast h_mcast 224.0.0.1 =>
+    - table_add swtrace add_swtrace => 13
+    - table_add edge_forward simple_forward 10.0.7.2 => 3
+    - table_add edge_forward simple_forward 10.0.7.3 => 4
+    programs:
+    - "simple_switch_CLI --thrift-port 9109 < ./l3_1.cmd"
+    - "chmod u+x generate_probe.py"
+    - "sudo python3 ./generate_probe.py -i l3_1 -d 7"
