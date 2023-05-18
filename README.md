@@ -11,13 +11,13 @@ HULA switches always choose the next best hop given the destination TOR switches
 It can handle link assymetry and sudden link failure. <br>
 
 
-### Install and Run HULA loadbalancer
+## Install and Run HULA loadbalancer
 0. pip3 install -r requirements.txt
 1. make compile
 2. sudo hula_top_gen (to change the number of core switches, aggregated switches, and leaf switches, edit environmnet variable in Makefile) <br>
 3. sudo make run
 
-### Visualize
+## Visualize
 To visualize the life of packet traveling from host A to host B - 
 1. start by doing 'To start' section
 2. generate each screen of host A and host B<br>
@@ -46,7 +46,7 @@ The output will be hula.gif
                             ![hula](https://github.com/Hyunsuk-Bang/HULA/assets/84240134/2d4f0750-ad31-4fca-a2e2-daceec83c355)
 
 
-### Test link asymmetry or link failure<br>
+##Test link asymmetry or link failure<br>
   ```
 $ make hula_link_failure
   ```
@@ -54,4 +54,7 @@ link recover<br>
   ```
 $ make hula_link_recover
   ```
+ 
+ ## Test results (ALV vs HULA)
+ https://docs.google.com/presentation/d/1OI1EZqZnLkBtFJu1vWRQZdUSB-iZnjZGZ7jF9nsa97U/edit?usp=sharing
 
